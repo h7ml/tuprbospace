@@ -1,0 +1,45 @@
+{
+  "name": "tuprbospace",
+  "version": "1.0.0",
+  "packageManager": "pnpm@7.3.0",
+  "description": "pnpm turbo workspaces",
+  "author": "h7ml <h7ml@qq.com>",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "commit": "git cz",
+    "build": "turbo run build",
+    "changeset": "changeset && changeset version",
+    "release": "run-s build releaseOnly",
+    "releaseOnly": "changeset publish",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install",
+    "dev": "turbo run dev"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.26.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.4",
+    "@femm/prettier": "^1.1.0",
+    "@femm/verify-commit": "^1.0.1",
+    "cz-git": "^1.6.1",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "turbo": "^1.10.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "useEmoji": true,
+      "czConfig": ".commitlintrc.js"
+    }
+  }
+}
