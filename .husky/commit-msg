@@ -2,4 +2,3 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx femm-verify-commit $1
-npx femm-verify-commit $1
